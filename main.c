@@ -22,9 +22,9 @@ int main_thread(SceSize args, void *argp){
             sceKernelDelayThread(1000);
         }
 
-        if(ctrls.Buttons & PSP_CTRL_L & PSP_CTRL_R & PSP_CTRL_SQUARE){
+        if(ctrls.Buttons & PSP_CTRL_LTRIGGER & PSP_CTRL_RTRIGGER & PSP_CTRL_SQUARE){
             locked = !locked;
-            while(ctrls.Buttons & PSP_CTRL_L & PSP_CTRL_R & PSP_CTRL_SQUARE){
+            while(ctrls.Buttons & PSP_CTRL_LTRIGGER & PSP_CTRL_RTRIGGER & PSP_CTRL_SQUARE){
                 sceCtrlPeekBufferPositive(&ctrls, 1);
             }
         }
